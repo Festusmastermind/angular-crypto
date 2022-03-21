@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DataService } from './data.service';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -8,9 +10,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [], //DataService am not really sure why this is added here though..
   bootstrap: [AppComponent]
 })
 export class AppModule { }
